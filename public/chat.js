@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3000/');
+const socket = io('https://galaxychat.herokuapp.com/');
 const formChat = document.getElementById('formChat');
 const btnLogout = document.getElementById('btnLogout');
 const messages = document.getElementById('messages');

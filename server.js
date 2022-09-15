@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const server = require('http').Server(app);
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
 const router = require('./routers.js');
 
 app.use(express.static('public'));
