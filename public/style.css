@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px dotted black; */
+}
+body{
+    background: rgb(77, 168, 214);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#formLogin{
+    margin: 100px auto;
+    padding-top: 30px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#formLogin *:not(#btnCreate){
+    border: none;
+    margin: 7px;
+}
+#lblTitle{
+    color: rgb(8, 82, 167);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+#textLogin, #passwordLogin{
+    width: 80%;
+    padding: 7px;
+    background: lightgray;
+}
+#btnLogin{
+    cursor: pointer;
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    color: white;
+    background: rgb(12, 195, 61);
+    font-weight: bold;
+    border-radius: 5px;
+}
+#btnCreate{ 
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    background: lightgray;
+    color: rgb(53, 53, 225);
+    font-weight: bold;
+}
+#formCreateUser{
+    margin-top: 100px;
+    padding: 20px;
+    width: 250px;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#formCreateUser div{
+    width: 100%;
+    margin-top: 10px;
+}
+#formCreateUser div input{
+    padding: 7px;
+    width: 100%;
+}
+#formCreateUser #btnCreateAccount{
+    cursor: pointer;
+    margin-top: 15px;
+    padding: 7px;
+    width: 100%;
+    background: rgb(12, 195, 61);
+    color: white;
+    font-weight: bold;  
+    font-size: 1em;
+    border: none;
+}
+.readyAccount{
+    cursor: pointer;
+    margin-top: 15px;
+    padding: 7px;
+    width: 100%;
+    color: blue;
+    border: none;
+    text-decoration: underline;
+    background: transparent;
+}
+
+#formChat{
+    margin-top: 50px;
+    width: 600px;
+    height: auto;
+    background: linear-gradient(to right, gray, black);  
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+@media(max-width: 600px) {
+    #formChat{
+        width: 100%;
+    }
+}
+#titleChat{
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    /* background: blue; */
+    color: white;
+    padding: 20px;
+
+}
+#userMessage{
+    display: flex;
+    width: 100%;
+    background: yellow;
+    overflow: hidden;
+}
+#userChat{
+    flex: 1;
+    background: rgb(34, 37, 39);
+    max-height: 500px;
+    overflow: scroll;
+    padding: 5px;
+}
+.wrapper{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+#messages{
+    flex: 3;
+    background: #c7dbf0;
+    max-height: 500px;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: scroll;
+}
+#messagesPrivate{
+    display: none;
+    flex: 3;
+    background: #c7dbf0;
+    max-height: 500px;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: scroll;
+}
+#message{
+    width: 100%;
+    padding: 5px;
+    margin-top: 15px;
+}
+#head{
+    text-transform: capitalize;
+}
+#body{
+    padding: 5px;
+    border: 1px solid white;    
+    border-radius: 5px;
+    max-width: 200px;
+    max-height: 200px;  
+    text-overflow: ellipsis;
+    overflow: scroll;
+    display: inline-block;
+    color: white;
+}
+
+#textSend{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+#txtMessage{
+    width: 65%;
+    height: 30px;
+    padding: 7px;
+    margin-right: 10px;
+
+}
+#btnSend{
+    width: 70px;
+    height: 30px;
+    background: blue;
+    color: white;
+}
+#btnLogout{
+    cursor: pointer;
+    float: right;
+    background: red;
+    padding: 7px;
+    color: white;
+}
+#btnSetting{
+    cursor: pointer;
+    float: left;
+    background: blue;
+    padding: 7px;
+    color: white;
+}
+#fileAvatar{
+    display: none;
+}
+#lblAvatar{
+    float: left;
+    background: blue;
+    color: white;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 0.6em;
+    box-shadow: inset -2px -2px 1px rgb(34, 37, 39);
+}
+#submitAvatar{
+    float: left;
+    background: blue;
+    color: white;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 0.2em;
+}
+#inputFile{
+    display: none;
+}
+#lblInputFile{
+    height: 30px;
+    padding: 5px;
+    background: greenyellow;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+    overflow: hidden;
+    font-size: 0.8em;
+}

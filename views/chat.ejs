@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>formChat</title>
+</head>
+<body>
+    <div id="formChat">
+        <div id="titleChat"><b id="textTitleChat"> Galaxy</b>
+            <!-- <button id="btnSetting">Setting</button> -->
+            <button id="btnLogout">Logout</button>
+        </div>
+        <div id="userMessage">
+            <div id="userChat">
+            </div>
+            <div id="messages"></div>
+            <div id="messagesPrivate"></div>
+        </div>
+        <form method="post" id="textSend" action="/uploadfile" enctype="multipart/form-data" >
+            <input name="file" type="file" id="inputFile">
+            <label for="inputFile" id="lblInputFile">Choose file...</label>
+            <input type="text" id="txtMessage">
+            <input type="button" value="Send" id="btnSend">
+            <!-- <input type="submit" value="SendData" id="btnSend"> -->
+        </form>
+        
+    </div>
+    <script src="chat.js"></script>
+</body>
+</html>
