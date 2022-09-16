@@ -98,6 +98,7 @@ app.post('/register',upload.single('file'),(req,res)=>{
 app.post('/login',(req,res) =>{
     const username = req.body.name;
     const password = req.body.pass;
+    console.log('databaseMysql',db);
     const query = `select * from user where (username = '${username}') and (password = '${password}');`
     if (username && password){
         db.query(query,(err,result) =>{
