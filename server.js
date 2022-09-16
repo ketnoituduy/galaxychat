@@ -19,7 +19,7 @@ const mysql = require('mysql');
 const db = mysql.createConnection({
     user:'b1102a1e89fcd7',
     password:'63771fdd',
-    local:'us-cdbr-east-06.cleardb.net',
+    host:'us-cdbr-east-06.cleardb.net',
     database: 'heroku_2b728aceb07979f'
 });
 // multer
