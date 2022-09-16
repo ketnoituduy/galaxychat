@@ -30,7 +30,7 @@ inputFile.addEventListener('change',function(e){
 })
 
 btnLogout.addEventListener('click',()=>{
-    location = 'http://localhost:3000'
+    location = 'https://galaxychat.herokuapp.com/'
 })
 
 btnSend.addEventListener('click',()=>{

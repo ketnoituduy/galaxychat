@@ -1,4 +1,4 @@
 const btnCreate = document.getElementById('btnCreate');
 btnCreate.addEventListener('click',()=>{
-    location = 'http://localhost:3000/register';
+    location = 'https://galaxychat.herokuapp.com/register';
 })
