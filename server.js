@@ -44,16 +44,16 @@ const storage2 = multer.diskStorage({
 })
 const fileSend = multer({storage:storage2}).single('file');
 app.use('/',router);
-app.get('https://galaxychat.herokuapp.com/chat',(req,res) =>{
+app.get('/chat',(req,res) =>{
     if (currentUser != ''){
         res.render('chat');
     }
     
 })
-app.get('https://galaxychat.herokuapp.com/register',(req,res) =>{
+app.get('/register',(req,res) =>{
     res.render('register');
 });
-app.post('https://galaxychat.herokuapp.com/register',upload.single('file'),(req,res)=>{
+app.post('/register',upload.single('file'),(req,res)=>{
     const username = req.body.username.trim();
     const password = req.body.password.trim();
     const avatar = req.file.filename;
@@ -95,7 +95,7 @@ app.post('https://galaxychat.herokuapp.com/register',upload.single('file'),(req,
         console.log('loi nhap username')
     }
 });
-app.post('https://galaxychat.herokuapp.com/login',(req,res) =>{
+app.post('/login',(req,res) =>{
     const username = req.body.name;
     const password = req.body.pass;
     const query = `select * from user where (username = '${username}') and (password = '${password}');`
