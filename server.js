@@ -95,7 +95,7 @@ app.post('/register',upload.single('file'),(req,res)=>{
         console.log('loi nhap username')
     }
 });
-app.post('/login',(req,res) =>{
+app.post('https://galaxychat.herokuapp.com/login',(req,res) =>{
     const username = req.body.name;
     const password = req.body.pass;
     const query = `select * from user where (username = '${username}') and (password = '${password}');`
