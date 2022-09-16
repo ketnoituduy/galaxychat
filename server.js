@@ -43,7 +43,7 @@ const storage2 = multer.diskStorage({
     }
 })
 const fileSend = multer({storage:storage2}).single('file');
-app.use('https://galaxychat.herokuapp.com/',router);
+app.use('/',router);
 app.get('https://galaxychat.herokuapp.com/chat',(req,res) =>{
     if (currentUser != ''){
         res.render('chat');
