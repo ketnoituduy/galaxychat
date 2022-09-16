@@ -43,17 +43,17 @@ const storage2 = multer.diskStorage({
     }
 })
 const fileSend = multer({storage:storage2}).single('file');
-app.use('/',router);
-app.get('/chat',(req,res) =>{
+app.use('https://galaxychat.herokuapp.com/',router);
+app.get('https://galaxychat.herokuapp.com/chat',(req,res) =>{
     if (currentUser != ''){
         res.render('chat');
     }
     
 })
-app.get('/register',(req,res) =>{
+app.get('https://galaxychat.herokuapp.com/register',(req,res) =>{
     res.render('register');
 });
-app.post('/register',upload.single('file'),(req,res)=>{
+app.post('https://galaxychat.herokuapp.com/register',upload.single('file'),(req,res)=>{
     const username = req.body.username.trim();
     const password = req.body.password.trim();
     const avatar = req.file.filename;
@@ -114,7 +114,7 @@ app.post('/login',(req,res) =>{
                             console.log(avatar);
 
                         })
-                        res.redirect('/chat');
+                        res.redirect('https://galaxychat.herokuapp.com/chat');
                     }
                     else{
                         console.log('da co user dang nhap');
