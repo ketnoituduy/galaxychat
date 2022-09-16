@@ -114,7 +114,7 @@ app.post('/login',(req,res) =>{
                             console.log(avatar);
 
                         })
-                        res.redirect('https://galaxychat.herokuapp.com/chat');
+                        res.redirect('/chat');
                     }
                     else{
                         console.log('da co user dang nhap');
