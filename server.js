@@ -50,10 +50,10 @@ app.get('https://galaxychat.herokuapp.com/chat',(req,res) =>{
     }
     
 })
-app.get('https://galaxychat.herokuapp.com/register',(req,res) =>{
+app.get('/register',(req,res) =>{
     res.render('register');
 });
-app.post('https://galaxychat.herokuapp.com/register',upload.single('file'),(req,res)=>{
+app.post('/register',upload.single('file'),(req,res)=>{
     const username = req.body.username.trim();
     const password = req.body.password.trim();
     const avatar = req.file.filename;
